@@ -35,7 +35,7 @@ export const GameBoard = ({ onSelectSquare, turns }) => {
                         {
                             row.map((playerSymbol, colIndex) => <li key={colIndex}>
                                 <button
-                                    onClick={onSelectSquare}
+                                    onClick={() => onSelectSquare(rowIndex, colIndex)}
                                 >
                                     {playerSymbol}
                                 </button>
